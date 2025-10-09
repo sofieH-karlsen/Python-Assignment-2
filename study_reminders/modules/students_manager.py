@@ -11,9 +11,9 @@ class StudentsManager: # Class to manage student data with JSON storage
                 return json.load(file)
         except FileNotFoundError:
              return [
-                {"name": "Alice", "email": "alice@example.com", "course": "Computer Science", "preferred_time": "08:00"},
-                {"name": "Bob", "email": "bob@example.com", "course": "Mathematics", "preferred_time": "09:00"},
-                {"name": "Charlie", "email": "charlie@example.com", "course": "Physics", "preferred_time": "07:30"}
+                {"name": "Amalie", "email": "amalie@example.com", "course": "Computer Science", "preferred_time": "08:00"},
+                {"name": "Benny", "email": "benny@example.com", "course": "Mathematics", "preferred_time": "09:00"},
+                {"name": "Charlotte", "email": "charlotte@example.com", "course": "Physics", "preferred_time": "07:30"}
                 ]
     
     def add_student(self, name, email, course, preferred_time="08:00"):
@@ -45,4 +45,3 @@ class StudentsManager: # Class to manage student data with JSON storage
         # Print all students
         for student in self.students:
             print(f"Name: {student['name']}, Email: {student['email']}, Course: {student['course']}, Preferred Time: {student['preferred_time']}")
-
