@@ -1,0 +1,38 @@
+[
+    {
+        "name": "Amamlie",
+        "email": "amalie@example.com",
+        "course": "Computer Science",
+        "preferred_time": "08:00"
+    },
+    {
+        "name": "Charlotte",
+        "email": "charlotte@example.com",
+        "course": "Physics",
+        "preferred_time": "07:30"
+    },
+    {
+        "name": "Dennis",
+        "email": "dennis@example.no",
+        "course": "Science",
+        "preferred_time": "09:00"
+    },
+    {
+        "name": "Elling",
+        "email": "elling@example.no",
+        "course": "mat og helse",
+        "preferred_time": "09:00"
+    },
+    {
+        "name": "Fredrikke",
+        "email": "fredrikke@example.no",
+        "course": "Buisness systems",
+        "preferred_time": "08:45"
+    },
+    {
+        "name": "Gunnar",
+        "email": "gunnar@example.no",
+        "course": "norsk",
+        "preferred_time": "13:00"
+    }
+]
