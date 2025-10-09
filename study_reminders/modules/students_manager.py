@@ -1,11 +1,13 @@
 import json
 
-class StudentsManager: # Class to manage student data with JSON storage
+class StudentsManager:
+    """ Class to manage student data with JSON storage """
     def __init__(self, file_path="students.json"):
         self.file_path = file_path
         self.students = self.load_students()
     
-    def load_students(self): # Load student data from a JSON file
+    def load_students(self):  
+        # Load student data from a JSON file
         try:
             with open(self.file_path, "r") as file:
                 return json.load(file)

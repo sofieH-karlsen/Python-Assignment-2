@@ -22,7 +22,7 @@ def run_scheduler(manager: StudentsManager):
     students = manager.get_students()
 
     # Display current students
-    print("Loaded students:")
+    print("Current students:")
     for s in students:
         print(f"  {s['name']} - {s['email']} ({s['course']}) at {s['preferred_time']}")
 
@@ -37,25 +37,25 @@ def run_scheduler(manager: StudentsManager):
     print("\nScheduling daily reminders (Ctrl+C to stop)...")
     schedule_reminders(manager, generate_reminder, send_reminder, log_reminder)
 
-def build_parser():
+def build_parser(): # https://www.datacamp.com/tutorial/python-argparse?dc_referrer=https%3A%2F%2Fduckduckgo.com%2F
     parser = argparse.ArgumentParser(description="study_reminders CLI tool")
     sub = parser.add_subparsers(dest="command")
 
-    # list
+    # subcommand list
     sub.add_parser("list", help="List all students")
 
-    # add
+    # subcommand add
     add_parser = sub.add_parser("add", help="Add a new student (name, email,course, preferred reminder time)(For arguments with multiple words use \"\")")
     add_parser.add_argument("name")
     add_parser.add_argument("email")
     add_parser.add_argument("course")
     add_parser.add_argument("preferred_time")
 
-    # remove
+    # subcommand remove
     remove_parser = sub.add_parser("remove", help="Remove a student (name)")
     remove_parser.add_argument("name")
 
-    # schedule
+    # subcommand schedule
     sub.add_parser("schedule", help="Runs simulation of scheduled reminder sending")
 
     return parser
@@ -65,11 +65,8 @@ def main():
     args = parser.parse_args()
     manager = StudentsManager()
 
-
     if args.command == "list":
          list_students(manager)
-    elif args.command == "send-now":
-        send_now(manager)
     elif args.command == "add":
         add_student(manager, args.name, args.email, args.course, args.preferred_time)
     elif args.command == "remove":
