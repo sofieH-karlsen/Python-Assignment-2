@@ -7,7 +7,7 @@ def read_requirements():
 setup(
     name="ACIT_StudyReminder",
     version="0.1",
-    packages=find_packages(),  # finds the acit_studyreminder package
+    packages=find_packages(), # find all packages in the project directory
     include_package_data=True,
     description="A module for ACIT4420 assignment 2: automated study reminders",
     author="Sofie Karlsen",
@@ -15,7 +15,7 @@ setup(
     install_requires=read_requirements(),
     entry_points={
         'console_scripts': [
-            'study_reminders=acit_studyreminder.main:main',  # points to main() inside main.py
+            'study_reminders=modules.main:main',  # points to main() inside main.py
         ],
     },
 )
