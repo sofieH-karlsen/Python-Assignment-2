@@ -1,2 +1,5 @@
 # don't add the pycache to git
 __pycache__
+
+# Don't add the JSON file with student data
+students.json
