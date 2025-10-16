@@ -8,6 +8,7 @@ setup(
     name="ACIT_StudyReminder",
     version="0.1",
     packages=find_packages(), # find all packages in the project directory
+    py_modules=["main"], # include top-level main.py so console entry point 'main:main' can be imported
     include_package_data=True,
     description="A module for ACIT4420 assignment 2: automated study reminders",
     author="Sofie Karlsen",
