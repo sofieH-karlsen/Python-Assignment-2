@@ -15,7 +15,7 @@ setup(
     install_requires=read_requirements(),
     entry_points={
         'console_scripts': [
-            'study_reminders=modules.main:main',  # points to main() inside main.py
+            'study_reminders=main:main',  # points to main() inside main.py
         ],
     },
 )
