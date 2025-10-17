@@ -3,7 +3,7 @@ Using Python to automate personalized study reminders for students
 
 ## Overview
 The 'ACIT_StudyReminder' package automates sending students personalised study reminders.\
-I manages the students data, generated reminders, simulates delivery by email, logs the activity, and automatically schedules reminders.
+It manages the students data, generated reminders, simulates delivery by email, logs the activity, and automatically schedules reminders.
 
 The package was developed as part of the second mandatory assignment for the course **ACIT4420: Problem-solving with Scripting** at OsloMet.
 
