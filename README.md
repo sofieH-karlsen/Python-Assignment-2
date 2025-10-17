@@ -5,14 +5,14 @@ Using Python to automate personalized study reminders for students
 The 'ACIT_StudyReminder' package automates sending students personalised study reminders.\
 I manages the students data, generated reminders, simulates delivery by email, logs the activity, and automatically schedules reminders.
 
-The package was developed as part of the secund mandetory assignment for the course **ACIT4420: Problem-solving with Scripting** at OsloMet.
+The package was developed as part of the second mandatory assignment for the course **ACIT4420: Problem-solving with Scripting** at OsloMet.
 
 ## Features
 - Manage student information (add, remove, list)
 - Generate personalised reminders
 - Simulate sending reminder via console output
 - Log the details of the reminders with timestamps
-- Schedule reminders based on prefferred time
+- Schedule reminders based on preferred time
 
 ## Structure
 
@@ -33,9 +33,9 @@ SHK-ACIT_StudyReminder
 └── .gitignore
 ```
 ## Installation
-The package can simply be isntalled by running\
+The package can simply be installed by running\
 `pip install git+https://gitlab.com/Soso2509/shk-assignment2.git`\
-Together with the package this wil also install the requrements noted in `requirements.txt`.
+Together with the package this wil also install the requirements noted in `requirements.txt`.
 
 ## Usage
 Once the package is installed it can be run with the command `study_reminders` followed by one of four sub-commands.
@@ -50,8 +50,8 @@ Name: Charlotte, Email: charlotte@example.com, Course: Physics, Preferred Time: 
 
 ```
 
-It should be noted that the package does not come with an `students.json` file with dummy data, and the output of this command without one will be a singel dummy student.\
-Such a file can be manually created or it will be autmatically created the first time the `add` subcommand(see below) is used without one.
+It should be noted that the package does not come with an `students.json` file with dummy data, and the output of this command without one will be a single dummy student.\
+Such a file can be manually created or it will be automatically created the first time the `add` subcommand(see below) is used without one.
 
 ### `study_reminders add <name> <email> <course> <preferred time>`
 Modifies the list of students by adding one.\
@@ -80,10 +80,10 @@ Said student is then removed from the JSON file\
 This command runs the automation process, and will
 - Load students from `students.json`(or the test student if the file does not exist)
 - Generate personalised reminders
-- Print a list of current sudents
+- Print a list of current students
 - Simulate sending them to each student email
 - Log the actions to `reminder_log.txt`(said file will be created if it does not exist)
-- Schedule furture reminders based on preffered times
+- Schedule future reminders based on preferred times
 
 ```bash
 # Example output
@@ -118,7 +118,3 @@ positional arguments:
 options:
   -h, --help            show this help message and exit
 ```
-
-
-
-
