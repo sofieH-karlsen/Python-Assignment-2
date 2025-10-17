@@ -33,7 +33,7 @@ def run_scheduler(manager: StudentsManager):
         send_reminder(student['email'], reminder)
         log_reminder(student, reminder)
 
-    # Schedule reminders (this will block)
+    # Schedule reminders
     print("\nScheduling daily reminders (Ctrl+C to stop)...")
     schedule_reminders(manager, generate_reminder, send_reminder, log_reminder)
 
@@ -45,7 +45,7 @@ def build_parser(): # https://www.datacamp.com/tutorial/python-argparse?dc_refer
     sub.add_parser("list", help="List all students")
 
     # subcommand add
-    add_parser = sub.add_parser("add", help="Add a new student (name, email,course, preferred reminder time)(For arguments with multiple words use \"\")")
+    add_parser = sub.add_parser("add", help="Add a new student (name, email,course, preferred reminder time)(For argument with multiple words use \"\")")
     add_parser.add_argument("name")
     add_parser.add_argument("email")
     add_parser.add_argument("course")
